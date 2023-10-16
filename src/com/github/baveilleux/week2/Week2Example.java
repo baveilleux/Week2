@@ -1,31 +1,25 @@
 package com.github.baveilleux.week2;
 
-public class Week2Example {
+import java.util.Scanner;
 
+public class Week2Example {
+	
+	// this must be how you insert comments //
 	public static void main (String[] args) {
-		int age = 18;
+	
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Enter a number between 1-400: ");
+		String input = scanner.nextLine();
+		Integer convertedInput = Integer.parseInt(input);
 		
-		if (age >= 19) {
-			System.out.println("You are an adult");
-			if (age > 65 ) {
-				System.out.println("You are a senior");
-			}
-		} else if (age >= 13) {
-			System.out.println("You are a teenager");
-		} else if (age == 12) {
-			System.out.println("You are a preteen");
+		System.out.println("You typed in: " + convertedInput);
+		
+		if (convertedInput < 50) {
+			System.out.println("No!");
+		} else if (convertedInput <= 300) {
+			System.out.println("Yes!");
 		} else {
-			System.out.println("You are a child");
-		}
-		
-		String output = "Your age is " + age;
-		
-		System.out.println(output);
-		
-		if (output.equals("Your age is 18")) {
-			System.out.println("Yay you can vote!");
-		} else if (output.equals("Your age is 21")) {
-			System.out.println("You can gamble and drink!");
+			System.out.println("No!");
 		}
 	}
 }
