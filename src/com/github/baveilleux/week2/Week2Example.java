@@ -8,18 +8,18 @@ public class Week2Example {
 	public static void main (String[] args) {
 	
 		Scanner scanner = new Scanner(System.in);
-		System.out.println("Enter a number between 1-400: ");
-		String input = scanner.nextLine();
-		Integer convertedInput = Integer.parseInt(input);
+		System.out.println("Type in your name: ");
+		String name = scanner.nextLine();
+		System.out.println("Type in your age: ");
+		String age = scanner.nextLine();
 		
-		System.out.println("You typed in: " + convertedInput);
-		
-		if (convertedInput < 50) {
-			System.out.println("No!");
-		} else if (convertedInput <= 300) {
-			System.out.println("Yes!");
+		if (name.equals("Trevor") 
+				& age.equals("36")) {
+			System.out.println("Holy cow it's me!");
 		} else {
-			System.out.println("No!");
-		}
+			System.out.println("Hello: " + name);
+		}	
+		
+		scanner.close();
 	}
 }
